@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/happy"
+        android:layout_width="291dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Happy"
+        app:layout_constraintBottom_toTopOf="@+id/sad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sad"
+        android:layout_width="292dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:text="Sad"
+        app:layout_constraintBottom_toTopOf="@+id/angry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/angry"
+        android:layout_width="285dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:text="Angry"
+        app:layout_constraintBottom_toTopOf="@+id/jealous"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/jealous"
+        android:layout_width="288dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="Jealous"
+        app:layout_constraintBottom_toTopOf="@+id/indifferent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/indifferent"
+        android:layout_width="283dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="Indifferent"
+        app:layout_constraintBottom_toTopOf="@+id/upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="146dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="32dp"
+        android:text="upload"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/download"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="132dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="36dp"
+        android:text="download"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indifferent"
+        app:layout_constraintVertical_bias="1.0" />
+</android.support.constraint.ConstraintLayout>

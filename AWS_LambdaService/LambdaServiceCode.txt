@@ -1,0 +1,41 @@
+from __future__ import print_function
+import json
+import mysql.connector
+
+
+
+def lambda_handler(event, context):
+    mydb = mysql.connector.connect(host="awsproject.clqwjuapppqy.us-east-1.rds.amazonaws.com", user="awsproject", passwd="awsproject",db="awsproject")
+    mycursor = mydb.cursor(buffered=True,dictionary=True)
+    
+    if(event['selection']=='upload'):
+     x="insert into `emotionv2`(`username`,`feeling`,`address`,`datetoday`,`timetoday`) values (%s,%s,%s,%s,%s)"
+     mycursor.execute(x,(event['key1'],event['key2'],event['key3'],event['key4'],event['key5']))
+     mydb.commit()
+     mydb.close()
+     return "SUCCESSFULLY UPLOADED!!!"
+
+   
+    if(event['selection']=='download'):
+     x="select * from emotionv2 where feeling= '%s'"
+     
+     y=(event['key2'],)
+  
+     #mycursor=mydb.cursor(buffered=True,dictionary=True)
+    
+     mycursor.execute(x%(y[0]))
+     data=mycursor.fetchall()
+    
+     mydb.commit()
+     mydb.close()
+   
+     return(data)
+    
+     
+    
+    return "INVALID OPTIONS!!!"
+   
+
+
+
+
